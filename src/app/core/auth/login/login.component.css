@@ -1,0 +1,37 @@
+.mda-form-group{
+    padding-bottom: 0px;
+}
+
+.span-input{
+    float: right; margin-top: -30px; position: relative; margin-right: 15px;
+}
+
+::-webkit-input-placeholder {
+    color: #afafaf;
+ }
+
+ :-moz-placeholder { /* Firefox 18- */
+    color: #afafaf;
+ }
+
+ ::-moz-placeholder {  /* Firefox 19+ */
+    color: #afafaf;
+ }
+
+ :-ms-input-placeholder {
+    color: #afafaf;
+ }
+
+ .sk-three-bounce{
+    margin: 0;
+    width: auto;
+    .sk-child{
+      width: 13px;
+      height: 13px;
+      background-color: #fff;
+    }
+ }
+
+ .btn-link{
+   cursor:pointer;  color: #afafaf;
+ }

@@ -1,0 +1,50 @@
+<mat-card class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>Shiba Inu</mat-card-title>
+      <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+    <mat-card-content>
+        <div class="card-body" [@enterAnimation]>
+            <form [formGroup]="form" novalidate="" (submit)="submitForm($event)" class="form-validate mb-3" novalidate="">
+
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="mda-form-group">
+                            <input placeholder="Usuário" class="mda-form-control" type="text" formControlName="username" [formControl]="form.controls['username']" aria-required="true" aria-invalid="true"/>
+                            <div class="span-input">
+                                <span class="text-muted bg-transparent"><em class="fa fa-user-lock text-info"></em></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="mda-form-group">
+                            <input placeholder="Senha" class="mda-form-control" type="password" formControlName="password" [formControl]="form.controls['password']" aria-required="true" aria-invalid="true"/>
+                            <div class="span-input">
+                                <span class="text-muted bg-transparent"><em class="fa fa-key text-info"></em></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div [ngSwitch]="loader">
+                    <button type="submit" class="btn btn-block btn-success mt-3">
+                        <div *ngSwitchCase="false">Login</div>
+                        <div *ngSwitchCase="true" class="sk-three-bounce">
+                            <div class="sk-child sk-bounce1"></div>
+                            <div class="sk-child sk-bounce2"></div>
+                            <div class="sk-child sk-bounce3"></div>
+                        </div>
+                    </button>
+                </div>
+            </form>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button>LIKE</button>
+      <button mat-button>SHARE</button>
+    </mat-card-actions>
+  </mat-card>
